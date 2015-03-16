@@ -19,7 +19,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body ng-app="home">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -54,7 +54,19 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    <script src="/vendor/jquery/jquery.js"></script>
-    <script src="/vendor/bootstrap/bootstrap.js"></script>
-    <script src="/vendor/bootstrap-dialog/bootstrap-dialog.min.js"></script>
+    <div ng-controller="ListCtrl">
+        <ul class="checklist">
+            <li ng-repeat="item in items">
+                <input type="checkbox" ng-checked="item.completed" /> <span ng-bind="item.description"></span>
+            </li>
+        </ul>
+
+        <button class="btn btn-primary" ng-click="addItem">Add</button>
+        <button class="btn btn-danger" ng-click="removeItems">Remove</button>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js" data-main="/js/home"></script>
+    <!--<script src="/vendor/jquery/jquery.js"></script>-->
+    <!--<script src="/vendor/bootstrap/bootstrap.js"></script>-->
+    <!--<script src="/vendor/bootstrap-dialog/bootstrap-dialog.min.js"></script>-->
 </body>

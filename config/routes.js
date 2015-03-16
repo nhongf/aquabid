@@ -35,7 +35,7 @@ module.exports.routes = {
     '/': {
         controller: 'HomeController',
         action: 'index'
-    }
+    },
 
 
     /***************************************************************************
@@ -47,5 +47,13 @@ module.exports.routes = {
      * for configuration options and examples.                                  *
      *                                                                          *
      ***************************************************************************/
+    'post /api/users': {
+        controller: 'UserController',
+        action: 'create'
+    },
 
+    'post /api/login': {
+        controller: 'UserController',
+        action: 'login'
+    }
 };
