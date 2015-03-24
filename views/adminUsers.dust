@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>AquaBid</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="/vendor/bootstrap-dialog/bootstrap-dialog.min.css" />
+
+    <link rel="stylesheet" href="/styles/base.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <h1>Admin Users page</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Activated</th>
+            </tr>
+        </thead>
+        <tbody>
+            {#users}
+                <tr>
+                    <td>{username}</td>
+                    <td>{email}</td>
+                    <td>{?activated}Active{:else}Pending{/activated}</td>
+                </tr>
+            {/users}
+        </tbody>
+    </table>
+    <nav>
+
+        <ul class="pagination">
+            {@select key=pageIndex}
+                {@eq value="1"}<li class="disabled">{/eq}
+                {@default}<li>{/default}
+            {/select}
+                <a href="javascript:;" aria-label="Previous" id="btn-prev">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="disabled">
+                <a href="javascript:;">
+                    Page {pageIndex} of {pageTotal}
+                </a>
+            </li>
+            {@select key=pageIndex}
+                {@eq value="{pageTotal}"}<li class="disabled">{/eq}
+                {@default}<li>{/default}
+            {/select}
+                <a href="javascript:;" aria-label="Next" id="btn-next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <input type="hidden" id="currentPage" value="{pageIndex}" />
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js" data-main="/js/aqua-com-admin-users"></script>
+</body>

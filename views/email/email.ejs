@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<body>
+<center>
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border: 1px solid rgb(221, 221, 221); max-width: 800px; background-color: #e9e9e9; color: #000">
+        <tbody>
+            <tr>
+                <td valign="top" align="center">
+                    <table width="90%" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: 20px 5%; padding: 20px; background-color: #FFF;">
+                        <tbody>
+                        <tr>
+                            <td valign="top">
+                                <div style="color:#000;font-family:Arial;font-size:15px;line-height:150%;text-align:left">
+                                    Hi <%=user.username%>,
+                                    <br /><br />
+                                    Click the link to activate your account!
+                                    <a href="http://localhost:1337/user/<%= user.id %>/activate/<%= user.activationToken %>" title="Activate Your Account">http://localhost:1337/user/<%= user.id %>/activate/<%= user.activationToken %></a>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</center>
+</body>
+</html>

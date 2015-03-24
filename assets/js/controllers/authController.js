@@ -5,7 +5,7 @@ define(['jquery', 'bootstrap-dialog', 'aqua-com-utils'], function($, BootstrapDi
 
     AQ_COM.controllers.AuthController.prototype.init = function() {
         this.signInBtn = $('#btn-signin');
-        this.signOutBtn = $('#btn-logout');
+        this.signOutBtn = $('#btn-signout');
         this.forgotPasswordBtn = $('#btn-forgotPassword');
         this.registerBtn = $('#btn-register');
 
@@ -20,7 +20,7 @@ define(['jquery', 'bootstrap-dialog', 'aqua-com-utils'], function($, BootstrapDi
         });
 
         this.signOutBtn.click(function() {
-            window.location.assign("/logout");
+           self.signOut();
         });
 
         this.forgotPasswordBtn.click(function() {
@@ -29,6 +29,19 @@ define(['jquery', 'bootstrap-dialog', 'aqua-com-utils'], function($, BootstrapDi
 
         this.registerBtn.click(function() {
             self.register();
+        });
+    }
+
+    AQ_COM.controllers.AuthController.prototype.signOut = function() {
+        AQ_COM.utils.ajaxWrapper({
+            type: "POST",
+            url: "/logout",
+            success: function(result) {
+                window.location.reload();
+            },
+            error: function(data) {
+                alert(data);
+            }
         });
     }
 
@@ -50,15 +63,11 @@ define(['jquery', 'bootstrap-dialog', 'aqua-com-utils'], function($, BootstrapDi
                             password: password,
                             username: username
                         },
-                        success: function(data) {
-                            dialog.close();
-
-                            if (data.value == 'advertiser') {
-                                window.location.assign("/advertisers");
-                            } else if (data.value == 'developer') {
-                                window.location.assign("/games");
-                            } else if (data.value == 'administrator') {
-                                window.location.assign("/admin");
+                        success: function(result) {
+                            if (result.data.type == 'admin') {
+                                window.location.assign('/admin');
+                            } else {
+                                window.location.reload();
                             }
                         },
                         error: function(data) {

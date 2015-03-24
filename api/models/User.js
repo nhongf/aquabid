@@ -7,7 +7,7 @@
 
 module.exports = {
     attributes: {
-        email:{
+        email: {
             type: 'email',
             required: true
         },
@@ -20,12 +20,28 @@ module.exports = {
             type: 'string',
             required: true
         },
-        activated: {
-            type: 'boolean',
-            defaultsTo: false
+        status: {
+            type: 'string',
+            enum: ['pending', 'active', 'disabled'],
+            defaultsTo: 'pending'
         },
         activationToken: {
             type: 'string'
+        },
+        type: {
+            type: 'string',
+            enum: ['user', 'admin'],
+            required: true,
+            defaultsTo: 'user'
+        },
+        socialId: {
+            type: 'string',
+            required: true,
+            unique: true
+        },
+        socialScreenshot: {
+            type: 'string',
+            required: true
         },
 
         /**
@@ -37,9 +53,8 @@ module.exports = {
             // this gives you an object with the current values
             var obj = this.toObject();
             delete obj.password;
-
             delete obj.activationToken;
-            delete obj.activated;
+
             // return the new object without password
             return obj;
         }

@@ -8,8 +8,12 @@
 module.exports = {
     index: function(req, res) {
         return res.view('index', {
-            title: 'Test'
+            isSignedIn: req.isAuthenticated()
         });
+    },
+
+    uploadPhoto: function(req, res) {
+        
     }
 };
 

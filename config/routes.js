@@ -36,6 +36,14 @@ module.exports.routes = {
         controller: 'HomeController',
         action: 'index'
     },
+    '/admin': {
+        controller: 'AdminController',
+        action: 'index'
+    },
+    '/admin/users': {
+        controller: 'AdminController',
+        action: 'users'
+    },
 
 
     /***************************************************************************
@@ -53,7 +61,12 @@ module.exports.routes = {
     },
 
     'post /api/login': {
-        controller: 'UserController',
+        controller: 'AuthController',
         action: 'login'
+    },
+
+    'post /api/logout': {
+        controller: 'AuthController',
+        action: 'logout'
     }
 };
