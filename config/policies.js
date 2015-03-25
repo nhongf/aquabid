@@ -56,7 +56,8 @@ module.exports.policies = {
         logout: 'sessionAuth'
     },
     UserController: {
-        create: true
+        create: true,
+        uploadPhoto: true
     },
     AdminController: {
         '*': ['sessionAuth', 'adminAuth']

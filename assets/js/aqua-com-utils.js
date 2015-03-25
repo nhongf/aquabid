@@ -21,11 +21,6 @@ AQ_COM.utils = {
             errorMessage = 'Password must contain at least six characters!';
             isValid = false;
         }
-        var re = /[0-9]/;
-        if (isValid && !re.test(password)) {
-            errorMessage = 'Password must contain at least one number (0-9)!';
-            isValid = false;
-        }
         callback(isValid, errorMessage);
     },
 
@@ -39,6 +34,18 @@ AQ_COM.utils = {
             errorMessage = 'Invalid email';
         }
 
+        callback(isValid, errorMessage);
+    },
+
+    validateNotEmpty: function(input, callback) {
+        var errorMessage = "";
+        var isValid = true;
+        input = $.trim(input);
+
+        if (input.length < 1) {
+            errorMessage = 'Please fill in require information';
+            isValid = false;
+        }
         callback(isValid, errorMessage);
     },
 

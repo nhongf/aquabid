@@ -10,10 +10,6 @@ module.exports = {
         return res.view('index', {
             isSignedIn: req.isAuthenticated()
         });
-    },
-
-    uploadPhoto: function(req, res) {
-        
     }
 };
 

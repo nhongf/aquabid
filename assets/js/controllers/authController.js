@@ -99,6 +99,8 @@ define(['jquery', 'bootstrap-dialog', 'aqua-com-utils'], function($, BootstrapDi
             AQ_COM.utils.validatePassword(data, validateCallback);
         } else if (type == 'email') {
             AQ_COM.utils.validateEmail(data, validateCallback);
+        } else {
+            AQ_COM.utils.validateNotEmpty(data, validateCallback);
         }
     }
 
@@ -107,12 +109,22 @@ define(['jquery', 'bootstrap-dialog', 'aqua-com-utils'], function($, BootstrapDi
 
         BootstrapDialog.show({
             title: 'Register',
-            message: $('<div class="alert alert-danger hidden" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span> <span class="errorMessage"></span></div><div class="row">' +
-                '<div class="col-xs-6"><div class="form-group"><input type="text" class="form-control" id="username" placeholder="Username"></div></div>' +
-                '<div class="col-xs-6"><div class="form-group"><input type="password" class="form-control" id="password" placeholder="Password"></div></div></div>' +
+            message: $('<div class="alert alert-danger hidden" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span> <span class="errorMessage"></span></div>' +
+                '<div class="row">' +
+                '<div class="col-xs-6"><div class="form-group"><input type="text" class="form-control" id="username" placeholder="Tên đăng nhập" required></div></div>' +
+                '<div class="col-xs-6"><div class="form-group"><input type="password" class="form-control" id="password" placeholder="Mật khẩu"></div></div>' +
+                '</div>' +
                 '<div class="row">' +
                 '<div class="col-xs-6"><div class="form-group"><input type="email" class="form-control" id="email" placeholder="Email"></div></div>' +
-                '<div class="col-xs-6"><div class="form-group"><input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number"></div></div></div>'),
+                '<div class="col-xs-6"><div class="form-group"><input type="text" class="form-control" id="phoneNumber" placeholder="Địa chỉ"></div></div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col-xs-6"><div class="form-group"><input type="text" class="form-control" id="address" placeholder="Số điện thoại"></div></div>' +
+                '<div class="col-xs-6"><div class="form-group"><input type="text" class="form-control" id="socialId" placeholder="Số CMND"></div></div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col-xs-6"><div class="form-group"><label>Hình CMND:</label><input type="file" id="socialScreenshot"></div></div>' +
+                '</div>'),
             buttons: [{
                 label: 'OK',
                 action: function(dialog) {
@@ -120,6 +132,10 @@ define(['jquery', 'bootstrap-dialog', 'aqua-com-utils'], function($, BootstrapDi
                     var $username = dialog.getModalBody().find('#username');
                     var $password = dialog.getModalBody().find('#password');
                     var $email = dialog.getModalBody().find('#email');
+                    var $phoneNumber = dialog.getModalBody().find('#phoneNumber');
+                    var $address = dialog.getModalBody().find('#address');
+                    var $socialId = dialog.getModalBody().find('#socialId');
+                    var $socialScreenshot = dialog.getModalBody().find('#socialScreenshot');
 
                     var $errorMessage = dialog.getModalBody().find('.errorMessage');
                     var $alert = dialog.getModalBody().find('.alert');
@@ -128,6 +144,9 @@ define(['jquery', 'bootstrap-dialog', 'aqua-com-utils'], function($, BootstrapDi
                     var username = $username.val();
                     var password = $password.val();
                     var email = $email.val();
+                    var phoneNumber = $phoneNumber.val();
+                    var address = $address.val();
+                    var socialId = $socialId.val();
 
                     var isNotValidCallback = function(errorMessage, $errorTarget) {
                         $errorMessage.html(errorMessage);
@@ -137,32 +156,64 @@ define(['jquery', 'bootstrap-dialog', 'aqua-com-utils'], function($, BootstrapDi
                         }
                     }
 
+
+
                     self.validate('username', username, $username, isNotValidCallback, function() {
                         self.validate('password', password, $password, isNotValidCallback, function() {
                             self.validate('email', email, $email, isNotValidCallback, function() {
-                                AQ_COM.utils.ajaxWrapper({
-                                    type: "POST",
-                                    url: "/users",
-                                    data: {
-                                        "username": username,
-                                        "password": password,
-                                        "email": email
-                                    },
-                                    success: function(data) {
-                                        alert('Registration successful, please check your email to verify your account.');
+                                self.validate('phoneNumber', phoneNumber, $phoneNumber, isNotValidCallback, function() {
+                                    self.validate('address', address, $address, isNotValidCallback, function() {
+                                        self.validate('socialId', socialId, $socialId, isNotValidCallback, function() {
+                                            if (!$socialScreenshot.val()) {
+                                                isNotValidCallback('Please upload your social screenshot!', $socialScreenshot);
+                                            } else {
+                                                var formData = new FormData();
+                                                formData.append("photo", $socialScreenshot.prop("files")[0]);
 
-                                        dialog.close();
-                                    },
-                                    error: function(data) {
-                                        if (data) {
-                                            var errorMessage = '';
-                                            for (var i in data.data) {
-                                                errorMessage += data.data[i] + '\n';
+                                                AQ_COM.utils.ajaxWrapper({
+                                                    url: '/uploadPhoto',
+                                                    type: 'POST',
+                                                    isUploadFile: true,
+                                                    data: formData,
+                                                    success: function(data) {
+                                                        var socialScreenshotUrl = data.data.url;
+
+                                                        AQ_COM.utils.ajaxWrapper({
+                                                            type: "POST",
+                                                            url: "/users",
+                                                            data: {
+                                                                "username": username,
+                                                                "password": password,
+                                                                "email": email,
+                                                                "phoneNumber": phoneNumber,
+                                                                "address": address,
+                                                                "socialId": socialId,
+                                                                "socialScreenshot": socialScreenshotUrl
+                                                            },
+                                                            success: function(data) {
+                                                                alert('Registration successful, please check your email to verify your account.');
+
+                                                                dialog.close();
+                                                            },
+                                                            error: function(data) {
+                                                                if (data) {
+                                                                    var errorMessage = '';
+                                                                    for (var i in data.data) {
+                                                                        errorMessage += data.data[i] + '\n';
+                                                                    }
+                                                                    $errorMessage.html(errorMessage);
+                                                                    $alert.removeClass('hidden');
+                                                                }
+                                                            }
+                                                        });
+                                                    },
+                                                    error: function() {
+                                                        alert("Can't upload image")
+                                                    }
+                                                });
                                             }
-                                            $errorMessage.html(errorMessage);
-                                            $alert.removeClass('hidden');
-                                        }
-                                    }
+                                        });
+                                    });
                                 });
                             });
                         });

@@ -7,16 +7,34 @@
 
 module.exports = {
     attributes: {
-        email: {
-            type: 'email',
-            required: true
-        },
+
         username: {
             type: 'string',
             required: true,
             unique: true
         },
         password: {
+            type: 'string',
+            required: true
+        },
+        email: {
+            type: 'email',
+            required: true
+        },
+        address: {
+            type: 'string',
+            required: true
+        },
+        phoneNumber: {
+            type: 'string',
+            required: true
+        },
+        socialId: {
+            type: 'string',
+            required: true,
+            unique: true
+        },
+        socialScreenshot: {
             type: 'string',
             required: true
         },
@@ -33,15 +51,6 @@ module.exports = {
             enum: ['user', 'admin'],
             required: true,
             defaultsTo: 'user'
-        },
-        socialId: {
-            type: 'string',
-            required: true,
-            unique: true
-        },
-        socialScreenshot: {
-            type: 'string',
-            required: true
         },
 
         /**
@@ -65,7 +74,8 @@ module.exports = {
             if (err) return callback(err);
 
             user.password = hash;
-            user.activated = false; //make sure nobody is creating a user with activate set to true, this is probably just for paranoia sake
+            user.type = 'user';
+            user.status = 'pending';
             user.activationToken = crypto.token(new Date().getTime() + user.email);
             return callback(null, user);
         });

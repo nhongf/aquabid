@@ -32,15 +32,15 @@ module.exports.routes = {
      *                                                                          *
      ***************************************************************************/
 
-    '/': {
+    'get /': {
         controller: 'HomeController',
         action: 'index'
     },
-    '/admin': {
+    'get /admin': {
         controller: 'AdminController',
         action: 'index'
     },
-    '/admin/users': {
+    'get /admin/users': {
         controller: 'AdminController',
         action: 'users'
     },
@@ -68,5 +68,10 @@ module.exports.routes = {
     'post /api/logout': {
         controller: 'AuthController',
         action: 'logout'
+    },
+
+    'post /api/uploadPhoto': {
+        controller: 'UserController',
+        action: 'uploadPhoto'
     }
 };

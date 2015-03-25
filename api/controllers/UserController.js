@@ -59,6 +59,29 @@ module.exports = {
 //                res.send(200, user);
 //            });
         });
+    },
+
+    uploadPhoto: function(req, res) {
+        var uploadFile = req.file('photo');
+
+        if (!uploadFile){
+            return res.badRequest();
+        }
+
+        uploadFile.upload({
+            dirname: '../../assets/images/default'
+        }, function onUploadComplete(err, files) {
+            if (err) return res.serverError(err);
+
+            var url = files[0].fd.replace(/^.*[\\\/]/, '');
+
+            res.ok({
+                success: 1,
+                data: {
+                    url: url
+                }
+            });
+        });
     }
 };
 
