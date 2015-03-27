@@ -62,12 +62,9 @@ AQ_COM.utils = {
                     options.success(response);
                 }
             },
-            error: function(xhr, data, err) {
-                console.log(data);
-                console.log(err);
-
+            error: function(error) {
                 if (options.error) {
-                    options.error();
+                    options.error(error.responseJSON);
                 }
             }
         }

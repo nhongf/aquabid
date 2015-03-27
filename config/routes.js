@@ -36,6 +36,14 @@ module.exports.routes = {
         controller: 'HomeController',
         action: 'index'
     },
+    'get /profile': {
+        controller: 'UserController',
+        action: 'profile'
+    },
+    'get /newBid': {
+        controller: 'BidController',
+        action: 'newBid'
+    },
     'get /admin': {
         controller: 'AdminController',
         action: 'index'
@@ -44,7 +52,6 @@ module.exports.routes = {
         controller: 'AdminController',
         action: 'users'
     },
-
 
     /***************************************************************************
      *                                                                          *
@@ -60,6 +67,11 @@ module.exports.routes = {
         action: 'create'
     },
 
+    'put /api/users/:user_id': {
+        controller: 'UserController',
+        action: 'updateUser'
+    },
+
     'post /api/login': {
         controller: 'AuthController',
         action: 'login'
@@ -73,5 +85,10 @@ module.exports.routes = {
     'post /api/uploadPhoto': {
         controller: 'UserController',
         action: 'uploadPhoto'
+    },
+
+    'put /api/admin/users/:user_id': {
+        controller: 'AdminController',
+        action: 'activate'
     }
 };

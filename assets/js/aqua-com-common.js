@@ -11,6 +11,10 @@ require(['require_config'], function() {
                     this.init = function () {
                         self.authController = new AQ_COM.controllers.AuthController();
                         self.authController.init();
+
+                        $('#btn-addNewBid').click(function() {
+                            window.location.href = '/newBid';
+                        });
                     }
                 }
             });

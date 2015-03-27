@@ -10,8 +10,8 @@ module.exports = {
     login: function(req, res){
         passport.authenticate('local', function(err, user, info){
             if (err) return res.badRequest(err);
-            if (!user) return res.badRequest('Wrong username or password');
-//            if (!user.activated) return res.send({error: 'User is not activated!'});
+            if (!user) return res.badRequest({error: 'Wrong username or password'});
+            if (user.status != 'active') return res.badRequest({error: 'User is not activated!'});
 
             req.logIn(user, function(err){
                 if (err) return res.badRequest(err);

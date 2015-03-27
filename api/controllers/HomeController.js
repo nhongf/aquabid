@@ -8,7 +8,9 @@
 module.exports = {
     index: function(req, res) {
         return res.view('index', {
-            isSignedIn: req.isAuthenticated()
+            currentUser: req.user ? req.user.toJSON() : null,
+            bidCategory: sails.config.globals.BID_CATEGORY,
+            bidCategoryDisplay: sails.config.globals.BID_CATEGORY_DISPLAY
         });
     }
 };

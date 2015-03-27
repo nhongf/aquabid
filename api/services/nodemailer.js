@@ -9,10 +9,8 @@ module.exports = {
     send: function(email, cb){
 
         /** sets up the modemailer smtp transport */
-        var transport = nodemailer.createTransport("SMTP", {
-            host: sails.config.nodemailer.host,
-            secureConnection: sails.config.nodemailer.usessl, // use SSL
-            port: sails.config.nodemailer.port, // port for secure SMTP
+        var transport = nodemailer.createTransport({
+            service: 'gmail',
             auth: {
                 user: sails.config.nodemailer.user,
                 pass: sails.config.nodemailer.pass
@@ -33,6 +31,7 @@ module.exports = {
             subject: subject,
             html: email.messageHtml
         }
+        console.log(mailOptions)
 
         /** Actually sends the email */
         transport.sendMail(mailOptions, function(err, response){

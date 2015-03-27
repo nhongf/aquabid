@@ -14,7 +14,12 @@ module.exports = {
         },
         type: {
             type: 'string',
-            enum: ['free', 'step'],
+            enum: ['FREE', 'STEP'],
+            required: true
+        },
+        category: {
+            type: 'string',
+            enum: sails.config.globals.BID_CATEGORY,
             required: true
         },
         step: {
@@ -35,6 +40,9 @@ module.exports = {
         screenshot: {
             type: 'array',
             required: true
+        },
+        video: {
+            type: 'array'
         }
     }
 };

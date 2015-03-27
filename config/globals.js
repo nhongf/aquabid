@@ -60,5 +60,35 @@ module.exports.globals = {
      ****************************************************************************/
 
     // models: true
-    DEFAULT_PAGE_SIZE: 10
+    DEFAULT_PAGE_SIZE: 10,
+    BID_CATEGORY: [
+        'FISH_BETTA',
+        'FISH_FLOWERHORN',
+        'FISH_DISCUS',
+        'FISH_AROWANA',
+        'FISH_GUPPY',
+        'FISH_GOLDFISH',
+        'FISH_KOI',
+        'FISH_OTHER',
+        'FISH_ACCESSORIES',
+        'AQUA_SHRIMP',
+        'AQUA_TREE',
+        'AQUA_TANK',
+        'AQUA_ACCESSORIES'
+    ],
+    BID_CATEGORY_DISPLAY: [
+        'Cá lia thia - Betta',
+        'Cá la hán - Flowerhorn',
+        'Cá dĩa - Discus',
+        'Cá rồng - Arowana',
+        'Cá bảy màu - Guppy',
+        'Cá vàng - Goldfish',
+        'Cá chép - Koi',
+        'Các loại cá khác',
+        'Phụ kiện cá cảnh',
+        'Tép thủy sinh - Tép cảnh',
+        'Cây thủy sinh',
+        'Hồ thủy sinh',
+        'Phụ kiện thủy sinh'
+    ]
 };

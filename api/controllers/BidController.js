@@ -6,6 +6,10 @@
  */
 
 module.exports = {
-	
+    newBid: function(req, res) {
+        return res.view('newBid', {
+            currentUser: req.user.toJSON()
+        });
+    }
 };
 

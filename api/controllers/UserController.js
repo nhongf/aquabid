@@ -4,60 +4,24 @@
  * @description :: Server-side logic for managing users
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
-var passport = require('passport');
 
 module.exports = {
     create: function(req, res){
         var params = req.params.all();
 
-        User.create(params, function(err, user){
-            if (err) return res.badRequest(err);
+        var srcFilePath = './assets/images/default/' + params.socialScreenshot;
+        var desFilePath = './assets/images/socialScreenshot/' + params.socialScreenshot;
+        console.log(srcFilePath);
 
-            return res.ok({
-                success: 1,
-                data: user
+        utils.moveFile(srcFilePath, desFilePath, function() {
+            User.create(params, function(err, user){
+                if (err) return res.badRequest(err);
+
+                return res.ok({
+                    success: 1,
+                    data: user
+                });
             });
-
-//            if (sails.config.user.requireUserActivation) {
-//                var emailTemplate = res.render('email/email.ejs', {user: user}, function(err, list) {
-//                    nodemailer.send({
-//                        name:       user.firstName + ' ' + user.lastName,
-//                        from:       sails.config.nodemailer.from,
-//                        to:         user.email,
-//                        subject:       'New Account Acivation Required',
-//                        messageHtml: list
-//                    }, function(err, response){
-//                        sails.log.debug('nodemailer sent', err, response);
-//                    });
-//                    res.send(200, user);
-//                });
-//            } else {
-//                res.send(200, user);
-//            }
-        });
-    },
-
-    sendActivateEmail: function(req, res) {
-        var params = req.params.all();
-
-        User.get({
-            id: params.user_id
-        }, function(err, user) {
-            console.log(err);
-            console.log(user);
-//            res.render('email/email.ejs', {user: user}, function(err, list) {
-//                nodemailer.send({
-//                    name:       user.firstName + ' ' + user.lastName,
-//                    from:       sails.config.nodemailer.from,
-//                    to:         user.email,
-//                    subject:       'New Account Acivation Required',
-//                    messageHtml: list
-//                }, function(err, response){
-//                    sails.log.debug('nodemailer sent', err, response);
-//                });
-//
-//                res.send(200, user);
-//            });
         });
     },
 
@@ -80,6 +44,38 @@ module.exports = {
                 data: {
                     url: url
                 }
+            });
+        });
+    },
+
+    profile: function(req, res) {
+        User.findOne({
+            id: req.session.passport.user
+        }, function(err, user) {
+            return res.view('profile', {
+                currentUser: req.user ? req.user.toJSON() : null
+            });
+        });
+    },
+
+    updateUser: function(req, res) {
+        var params = req.params.all();
+
+        var updateInfo = {};
+        if (params.address) {
+            updateInfo.address = params.address;
+        }
+        if (params.phoneNumber) {
+            updateInfo.phoneNumber = params.phoneNumber;
+        }
+
+        User.update({
+            id: params.user_id
+        }, updateInfo, function(err, user) {
+            if (err) return res.badRequest(err);
+
+            res.ok({
+                success: 1
             });
         });
     }

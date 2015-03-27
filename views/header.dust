@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">AquaBid Vietnam</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav navbar-right">
+                {^currentUser}
+                    <li><a href="javascript:;" id="btn-signin">Sign in</a></li>
+                    <li><a href="javascript:;" id="btn-register">Register</a></li>
+                    <li><a href="javascript:;" id="btn-forgotPassword">Forgot password</a></li>
+                {:else}
+                    <li><button type="button" class="btn btn-primary" style="margin-top: 7px" id="btn-addBid">+ Add New Bid</button></li>
+                    <li>
+                        <a href="/profile" id="btn-profile">Welcome, <strong>{currentUser.username}</strong></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="btn-signout">Sign out</a>
+                    </li>
+                {/currentUser}
+            </ul>
+        </div>
+    </div>
+</nav>

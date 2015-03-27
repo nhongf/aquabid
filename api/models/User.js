@@ -43,9 +43,6 @@ module.exports = {
             enum: ['pending', 'active', 'disabled'],
             defaultsTo: 'pending'
         },
-        activationToken: {
-            type: 'string'
-        },
         type: {
             type: 'string',
             enum: ['user', 'admin'],
@@ -62,7 +59,6 @@ module.exports = {
             // this gives you an object with the current values
             var obj = this.toObject();
             delete obj.password;
-            delete obj.activationToken;
 
             // return the new object without password
             return obj;
@@ -76,7 +72,6 @@ module.exports = {
             user.password = hash;
             user.type = 'user';
             user.status = 'pending';
-            user.activationToken = crypto.token(new Date().getTime() + user.email);
             return callback(null, user);
         });
     }

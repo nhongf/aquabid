@@ -71,7 +71,9 @@ define(['jquery', 'bootstrap-dialog', 'aqua-com-utils'], function($, BootstrapDi
                             }
                         },
                         error: function(data) {
-
+                            if (data) {
+                                alert(data.error);
+                            }
                         }
                     });
                 }
@@ -156,8 +158,6 @@ define(['jquery', 'bootstrap-dialog', 'aqua-com-utils'], function($, BootstrapDi
                         }
                     }
 
-
-
                     self.validate('username', username, $username, isNotValidCallback, function() {
                         self.validate('password', password, $password, isNotValidCallback, function() {
                             self.validate('email', email, $email, isNotValidCallback, function() {
@@ -197,12 +197,13 @@ define(['jquery', 'bootstrap-dialog', 'aqua-com-utils'], function($, BootstrapDi
                                                             },
                                                             error: function(data) {
                                                                 if (data) {
-                                                                    var errorMessage = '';
-                                                                    for (var i in data.data) {
-                                                                        errorMessage += data.data[i] + '\n';
+                                                                    if (data.raw.err.indexOf('socialIdUnique') > -1) {
+                                                                        isNotValidCallback('Social Id existed!', $socialId);
+                                                                    } else if (data.raw.err.indexOf('emailUnique') > -1) {
+                                                                        isNotValidCallback('Email existed!', $email);
+                                                                    } else if (data.raw.err.indexOf('usernameUnique') > -1) {
+                                                                        isNotValidCallback('Username existed!', $username);
                                                                     }
-                                                                    $errorMessage.html(errorMessage);
-                                                                    $alert.removeClass('hidden');
                                                                 }
                                                             }
                                                         });
