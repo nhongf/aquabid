@@ -1,0 +1,48 @@
+.Slider ul#img li .Mask .Title {
+	text-shadow: none!important;
+	filter: none!important;
+}
+
+.Slider ul#img li .Mask .Quote {
+	text-shadow: none!important;
+	filter: none!important;
+}
+
+.Slider ul#img li .Mask .ViewMore {
+	text-shadow: none!important;
+	filter: none!important;
+}
+
+.DivContent ul li h4 {
+	font-size: 13px;
+}
+
+.DivContent ul li h4 span {
+	font-size: 13px;
+}
+
+.Content > .Wrapper .MainContent .Donator ul li {
+  display: block;
+  float: left;
+  margin-left: 4px;
+  margin-right: 15px;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .AutionBlock ul li,
+.Content > .Wrapper .MainContent .Content .DivContent .NewsBlock ul li {
+	width: 450px;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .AutionBlock ul li span.ShortDescr {
+	width: 450px;
+}
+
+.Content > .Wrapper .MainContent .Donator {
+	margin-bottom: 20px;
+	float: left;
+}
+
+input[type=text],input[type=password] {
+	margin: 0px!important;
+	height: 26px!important;
+}

@@ -1,0 +1,1552 @@
+body {
+	background: url(../images/bg-body.png) repeat 0 0 transparent;
+	font-size: 13px;
+}
+
+.OuterWrapper {
+	height: 100%;
+	margin-bottom: 50px;
+	width: 1025px;
+	margin: 0 auto;
+}
+
+.InnerWrapper {
+	width: 1025px;
+	background: url(../images/bg-content-scroll.png) repeat-y 0 0 transparent;
+	float: left;
+}
+
+.Content > .Wrapper {
+	width: 1000px;
+	margin-left: 12px;
+}
+
+.Content > .Wrapper .MainContent {
+	margin-left: 20px;
+	width: 960px;
+}
+
+.Content > .Wrapper .MainContent .BigSlider {
+	width: 960px;
+	height: 440px;
+	background: url(../images/msk-main-slider.png) no-repeat 0 0 transparent;
+	overflow: hidden;
+}
+
+.Content > .Wrapper .MainContent .Content {
+	width: 960px;
+	float: left;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent {
+	margin-top: 38px;
+	float: left;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent:last-child {
+	margin-top: 20px;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent > div > h3 a:visited,
+.Content > .Wrapper .MainContent .Content .DivContent > div > h3 a:link {
+	color: #f86208;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	float: left;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent > div > div > h3 a:visited,
+.Content > .Wrapper .MainContent .Content .DivContent > div > div > h3 a:link {
+	color: #f86208;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	float: left;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent > div > h3 a:hover {
+	color: #0095ff;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent > div > div > h3 a:hover {
+	color: #0095ff;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent > div > p {
+	margin-top: 28px;
+	color: #545454;
+	text-align: justify;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent > div > p.First {
+	margin-top: 18px;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent a.ViewMore:link,
+.Content > .Wrapper .MainContent .Content .DivContent a.ViewMore:visited {
+	float: right;
+	color: #f86208;
+	font-size: 12px;
+	text-decoration: underline;
+	font-weight: normal;
+	padding-right: 3px;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent a.ViewMore:hover {
+	color: #0095ff;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent > div {
+	float: left;
+	width: 450px;
+	margin-left: 20px;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .NewsBlock {
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .ShortIntro h3 {
+	margin-bottom: 0px;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent div h3 {
+	margin-bottom: 15px;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent h3 a {
+	background-color: #FFF;
+	padding-right: 5px;
+}
+
+.ContentRight.AutionBlock ul li span.OpenTime {
+	font-weight: normal!important;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .AutionBlock a.ViewMore,
+.Content > .Wrapper .MainContent .Content .DivContent .NewsBlock a.ViewMore {
+	line-height: 23px;
+	padding-right: 10px;
+	background: url(../images/bg-link-viewmore.gif) no-repeat 100% 10px transparent;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .AutionBlock ul,
+.Content > .Wrapper .MainContent .Content .DivContent .NewsBlock ul {
+	float: left;
+	display: block;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .AutionBlock ul li,
+.Content > .Wrapper .MainContent .Content .DivContent .NewsBlock ul li {
+	float: left;
+	display: block;
+	clear: both;
+	margin-bottom: 20px;
+	width: 450px;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .AutionBlock ul li h4,
+.Content > .Wrapper .MainContent .Content .DivContent .NewsBlock ul li h4 {
+	line-height: 13px;
+	margin-bottom: 5px;
+	position: relative;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .AutionBlock ul li h4 a:visited,
+.Content > .Wrapper .MainContent .Content .DivContent .AutionBlock ul li h4 a:link,
+.Content > .Wrapper .MainContent .Content .DivContent .NewsBlock ul li h4 a:visited,
+.Content > .Wrapper .MainContent .Content .DivContent .NewsBlock ul li h4 a:link {
+	color: #545454;
+	font-weight: bold;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .AutionBlock ul li h4 a:hover,
+.Content > .Wrapper .MainContent .Content .DivContent .NewsBlock ul li h4 a:hover {
+	color: #0095ff;
+	font-weight: bold;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .AutionBlock ul li span.ShortDescr,
+.Content > .Wrapper .MainContent .Content .DivContent .NewsBlock ul li span.ShortDescr {
+	font-weight: normal;
+	color: #545454;
+	text-align: justify;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .AutionBlock ul li h4 span.Date,
+.Content > .Wrapper .MainContent .Content .DivContent .NewsBlock ul li h4 span.Date {
+	font-weight: normal;
+	color: #acacac;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .NewsBlock ul li a.Image {
+	float: left;
+	display: block;
+	margin-right: 8px;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .AutionBlock .OpenTime {
+	float: left;
+	display: block;
+	clear: both;
+	color: #F86208;
+	font-style: italic;
+	padding-bottom: 3px;
+	font-weight: bold;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent .AutionBlock .ShortDescr {
+	float: left;
+	display: block;
+	clear: both;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent h3 {
+	display: block;
+	width: 100%;
+	background: url(../images/bg-hozt.gif) repeat 0 0 transparent;
+	line-height: 24px;
+	height: 24px;
+}
+
+.Content > .Wrapper .MainContent .Content .DivContent h3.NoBackground {
+	background: none;
+}
+
+.Content > .Wrapper .MainContent .Donator {
+	float: left;
+	width: 960px;
+	margin-bottom: 20px;
+	margin-top: 24px;
+}
+
+.Content > .Wrapper .MainContent .Donator .CurvedTop {
+	float: left;
+	width: 960px;
+	height: 5px;
+	background: url(../images/bg-cborder-topbottom.png) no-repeat 0 0 transparent;
+}
+
+.Content > .Wrapper .MainContent .Donator .CurvedBottom {
+	float: left;
+	width: 960px;
+	height: 5px;
+	background: url(../images/bg-cborder-topbottom.png) no-repeat 0 -5px transparent;
+}
+
+.Content > .Wrapper .MainContent .Donator .Wrapper {
+	float: left;
+	width: 918px;
+	border-right: 1px solid #e4e4e4;
+	border-left: 1px solid #e4e4e4;
+	padding: 0 20px;
+}
+
+.Content > .Wrapper .MainContent .Donator ul {
+	display: block;
+	float: left;
+	margin: 9px 0;
+}
+
+.Content > .Wrapper .MainContent .Donator ul li {
+	float: left;
+	display: block;
+	margin-right: 17px;
+	margin-left: 6px;
+}
+
+.Content > .Wrapper .MainContent .Donator ul li:last-child {
+	margin-right: 0px;
+}
+
+.Content > .Wrapper .MainContent .Donator h3 {
+	background: url("../images/bg-hozt.gif") repeat scroll 0 0 transparent;
+	display: block;
+	font-size: 20px;
+	height: 24px;
+	line-height: 24px;
+	margin: 7px 0 15px;
+	width: 100%;
+}
+
+.Content > .Wrapper .MainContent .Donator h3 > span {
+	background-color: #FFF;
+	height: 24px;
+	line-height: 24px;
+	padding-right: 10px;
+	color: #f86208;
+}
+
+.HeaderWrapper {
+	width: 1025px;
+	background: url(../images/bg-content-scroll.png) repeat-y 0 0 transparent;
+}
+
+.HeaderWrapper > .Wrapper {
+	width: 960px;
+	margin-left: 32px;
+	height: 190px;
+	position: relative;
+}
+
+.HeaderWrapper > .Wrapper .Logo {
+  left: 30px;
+  position: absolute;
+  top: 20px;
+}
+
+.HeaderWrapper > .Wrapper .Logo h1 a:visited,
+.HeaderWrapper > .Wrapper .Logo h1 a:link {
+	display: block;
+	width: 124px;
+	height: 115px;
+	background: url(../images/logo-donate.png) no-repeat 0 0 transparent;
+	text-indent: -999em;
+}
+
+.HeaderWrapper > .Wrapper .TopSearchBox {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 640px;
+	height: 70px;
+	float: left;
+}
+
+.HeaderWrapper > .Wrapper .TopSearchBox .CurvedLeft {
+	background: url(../images/bg-cborder-top-rl.png) no-repeat 0 0 transparent;
+	width: 5px;
+	height: 70px;
+	float: left;
+}
+.HeaderWrapper > .Wrapper .TopSearchBox .CurvedRight {
+	background: url(../images/bg-cborder-top-rl.png) no-repeat -5px 0 transparent;
+	width: 5px;
+	height: 70px;
+	float: left;
+}
+.HeaderWrapper > .Wrapper .TopSearchBox > .Wrapper {
+	background-color: #2d3032;
+	width: 630px;
+	float: left;
+	height: 70px;
+	position: relative;
+}
+
+.HeaderWrapper > .Wrapper .MainMenu {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 960px;
+	height: 40px;
+	background: url(../images/bg-main-menu.png) no-repeat 0 0 transparent;
+}
+
+.MainMenu > ul {
+	list-style: none;
+	float: left;
+	display: block;
+}
+
+.MainMenu > ul > li {
+	float: left;
+	display: block;
+}
+
+.MainMenu > ul > li.SepLine {
+	background: url(../images/bg-sepline.png) no-repeat 0 50% transparent;
+	width: 1px;
+	height: 40px;
+}
+
+.MainMenu > ul > li > a:visited,
+.MainMenu > ul > li > a:link {
+	color: #FBFBFB;
+	display: block;
+	float: left;
+	font-size: 14px;
+	line-height: 40px;
+	padding: 0 28px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.MainMenu > ul > li.Hilite > a,
+.MainMenu > ul > li > a.Hilite,
+.MainMenu > ul > li.Active > a,
+.MainMenu > ul > li > a.Active,
+.MainMenu > ul > li > a:hover {
+	color: #000000;
+}
+
+.MainMenu > ul > li.Off > a,
+.MainMenu > ul > li.Off > a:hover,
+.MainMenu > ul > li > a.Off:hover,
+.MainMenu > ul > li > a.Off {
+	color: #ac4a0f;
+}
+
+.SecMenu {
+	display: block;
+	float: left;
+	left: 13px;
+	position: absolute;
+	top: 26px;
+}
+
+.SecMenu > ul {
+	display: block;
+	float: left;
+	width: 300px;
+}
+
+.SecMenu > ul li {
+	display: inline;
+	margin-right: 17px;
+	font-weight: bold;
+	color: #fff;
+	float: left;
+}
+.SecMenu > ul li:first-child{
+	color: #0f93ff !important;
+	float: left;
+}
+
+.SecMenu > ul li a:visited,
+.SecMenu > ul li a:link {
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: underline;
+	display: inline;
+	margin-right: 20px;
+	float: left;
+}
+
+.SecMenu > ul li a:hover {
+	font-weight: bold;
+	color: #f86208;
+	text-decoration: none;
+}
+
+.SecMenu > ul li a span {
+	display: block;
+	float: left;
+	line-height: 16px;
+	text-decoration: underline;
+}
+
+.SecMenu > ul li a:hover span {
+	text-decoration: none;
+}
+
+.SecMenu > ul li a span.Bullet {
+	text-decoration: none;
+}
+
+.SecMenu > ul li a span.Bullet {
+	width: 17px;
+	height: 16px;
+	margin-right: 6px;
+	background: url(../images/bg-icons.png) no-repeat 0 0 transparent;
+}
+
+.SecMenu > ul li.LienHe a span {
+	background-position: 0 0;
+}
+
+.SecMenu > ul li.DangNhap a span {
+	background-position: -17px 0;
+}
+
+.SecMenu > ul li.DangKy a span {
+	background-position: -34px 0;
+}
+
+.SecMenu > ul li.LienHe a:hover span {
+	background-position: 0 -16px;
+}
+
+.SecMenu > ul li.DangNhap a:hover span {
+	background-position: -17px -16px;
+}
+
+.SecMenu > ul li.DangKy a:hover span {
+	background-position: -34px -16px;
+}
+
+.FormSearch {
+	position: absolute;
+	right: 6px;
+	top: 12px;
+}
+
+.FormSearch .BgTextbox {
+	background: url(../images/bg-search-txtbox.png) no-repeat 0 0 transparent;
+	border: none;
+	width: 170px;
+	padding: 0px;
+	line-height: 40px;
+	color: #545454;
+	height: 40px;
+	padding: 0 20px;
+	float: left;
+	margin-right: 10px;
+}
+
+.FormSearch .SearchBtn {
+	background: url(../images/bg-btn-timkiem.png) no-repeat 0 0 transparent;
+	width: 90px;
+	height: 40px;
+	overflow: hidden;
+	border: none;
+	text-indent: -999em;
+	float: left;
+}
+
+.FormSearch .SearchBtn:hover {
+	background-position: 0 -40px;
+	cursor: pointer;
+}
+
+
+.Slider {
+	width: 960px;
+	height: 440px;
+	overflow: hidden;
+	position: relative;
+}
+
+.Slider > a {
+	width: 40px;
+	height: 40px;
+	display: block;
+	float: left;
+	position: absolute;
+	background: url("../images/bg-btn-main-slider.png") no-repeat 0 0 transparent;
+	z-index: 15;
+	overflow: hidden;
+	text-indent: -999em;
+}
+
+.Slider > a.GoLeftBtn:link,
+.Slider > a.GoLeftBtn:visited {
+	background-position: 0 0;
+	left: 21px;
+	top: 199px;
+}
+.Slider > a.GoLeftBtn:hover {
+	background-position: 0 -40px;
+}
+
+.Slider > a.GoRightBtn:link,
+.Slider > a.GoRightBtn:visited {
+	background-position: -40px 0;
+	right: 21px;
+	top: 199px;
+}
+.Slider > a.GoRightBtn:hover {
+	background-position: -40px -40px;
+}
+
+.Slider ul#img {
+	height: 440px;
+	float: left;
+	display: block;
+	list-style: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.Slider ul#img li {
+	height: 440px;
+	width: 960px;
+	float: left;
+	display: block;
+	list-style: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.Slider ul#img li  > .Wrapper{
+	height: 440px;
+	width: 960px;
+	float: left;
+	position: relative;
+}
+
+.Slider ul#img li > a {
+	height: 440px;
+	width: 960px;
+	float: left;
+	display: block;
+	position: absolute;
+	z-index: 5;
+	left: 0px;
+	top: 0px;
+}
+
+.Slider ul#img li a img {
+	width: 960px;
+	height: 440px;
+	display: block;
+}
+
+.Slider ul#img li .Mask {
+	background: url("../images/msk-main-slider.png") no-repeat scroll 0 0 transparent;
+	display: block;
+	height: 315px;
+	left: 0;
+	padding-left: 96px;
+	padding-top: 125px;
+	position: absolute;
+	top: 0;
+	width: 864px;
+	z-index: 8;
+}
+
+.Slider ul#img li .Mask .Title {
+	color: #FFF;
+	font-size: 25px;
+	text-shadow: 2px 2px 2px #2e2e2e;
+	filter: dropshadow(color=#2e2e2e, offx=2, offy=2);
+}
+
+.Slider ul#img li .Mask .Quote {
+	color: #FFF;
+	font-size: 35px;
+	text-shadow: 2px 2px 2px #2e2e2e;
+	filter: dropshadow(color=#2e2e2e, offx=2, offy=2);
+	width: 330px;
+	margin-top: 25px;
+	line-height: 1.1;
+	font-weight: bold;
+}
+
+.Slider ul#img li .Mask .ViewMore {
+	width: 330px;
+	display: block;
+	float: left;
+	color: #f86208;
+	text-decoration: underline;
+	text-shadow: 2px 2px 2px #2e2e2e;
+	filter: dropshadow(color=#2e2e2e, offx=2, offy=2);
+	width: 320px;
+	text-align: right;
+	margin-top: 15px;
+}
+
+.Slider ul#img li .Mask .ViewMore:hover {
+	color: #0095FF;
+}
+
+.Content .HeaderImg {
+	float: left;
+	width: 960px;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+
+.Content .HeaderImg img {
+	display: block;
+	width: 960px;
+	height: 200px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	float: left;
+}
+
+.Content .HeaderImg span {
+	display: block;
+	width: 960px;
+	height: 200px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: url(../images/msk-sub-slider.png) no-repeat 0 0 transparent;
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.FooterWrapper {
+	background: url("../images/bg-footer.png") no-repeat scroll 0 0 transparent;
+	height: 60px;
+	margin-bottom: 50px;
+	float: left;
+	width: 1025px;
+}
+
+.FooterWrapper .Wrapper {
+	height: 58px;
+	margin-left: 12px;
+	position: relative;
+	width: 1000px;
+}
+
+.FooterWrapper .Wrapper div.Copyright {
+	color: #9E9E9E;
+	float: left;
+	left: 38px;
+	position: absolute;
+	top: 20px;
+}
+
+.FooterWrapper .Wrapper div.Social {
+	position: absolute;
+	right: 19px;
+	top: 12px;
+}
+
+.FooterWrapper .Wrapper div.Social > p {
+	color: #FFFFFF;
+	display: block;
+	float: left;
+	font-weight: bold;
+	height: 34px;
+	line-height: 34px;
+}
+
+.FooterWrapper .Wrapper div.Social > ul {
+	float: left;
+	display: block;
+}
+
+.FooterWrapper .Wrapper div.Social > ul li {
+	float: left;
+	display: block;
+	margin-left: 10px;
+}
+
+.FooterWrapper .Wrapper div.Social > ul li a {
+	float: left;
+	display: block;
+	background: url(../images/bg-btn-social.png) no-repeat 0 0 transparent;
+	width: 33px;
+	height: 33px;
+	overflow: hidden;
+	text-indent: -999em;
+}
+
+.FooterWrapper .Wrapper div.Social > ul li a.Facebook:link,
+.FooterWrapper .Wrapper div.Social > ul li a.Facebook:visited {
+	background-position: 0 0;
+}
+.FooterWrapper .Wrapper div.Social > ul li a.Facebook:hover {
+	background-position: 0 -34px;
+}
+
+.FooterWrapper .Wrapper div.Social > ul li a.Twitter:link,
+.FooterWrapper .Wrapper div.Social > ul li a.Twitter:visited {
+	background-position: -34px 0;
+}
+.FooterWrapper .Wrapper div.Social > ul li a.Twitter:hover {
+	background-position: -34px -34px;
+}
+
+.FooterWrapper .Wrapper div.Social > ul li a.LinkedIn:link,
+.FooterWrapper .Wrapper div.Social > ul li a.LinkedIn:visited {
+	background-position: -68px 0;
+}
+.FooterWrapper .Wrapper div.Social > ul li a.LinkedIn:hover {
+	background-position: -68px -34px;
+}
+
+.FooterWrapper .Wrapper div.Social > ul li a.YouTube:link,
+.FooterWrapper .Wrapper div.Social > ul li a.YouTube:visited {
+	background-position: -102px 0;
+}
+.FooterWrapper .Wrapper div.Social > ul li a.YouTube:hover {
+	background-position: -102px -34px;
+}
+
+.FooterWrapper .Wrapper div.Social > ul li a.Flickr:link,
+.FooterWrapper .Wrapper div.Social > ul li a.Flickr:visited {
+	background-position: -136px 0;
+}
+.FooterWrapper .Wrapper div.Social > ul li a.Flickr:hover {
+	background-position: -136px -34px;
+}
+
+.FooterWrapper .Wrapper div.Social > ul li a.RSS:link,
+.FooterWrapper .Wrapper div.Social > ul li a.RSS:visited {
+	background-position: -170px 0;
+}
+.FooterWrapper .Wrapper div.Social > ul li a.RSS:hover {
+	background-position: -170px -34px;
+}
+
+#topbar {
+	display: none;
+}
+
+.Off a,
+a.Off,
+.Off a:hover,
+a.Off:hover {
+	cursor: default;
+}
+
+div.Clear {
+	width: 100%;
+	float: left;
+	clear: both;
+}
+
+small a {
+	display: none;
+}
+
+div.ContactUs {
+	float: left;
+	width: 960px;
+	overflow: hidden;
+}
+
+div.ContactUs .GMap {
+	float: left;
+	height: 425px;
+}
+
+div.ContactUs .ContactForm {
+	float: left;
+	width: 630px;
+	overflow: hidden;
+}
+
+div.ContactUs .ContactInfo  > h3,
+div.ContactUs .ContactForm  > h3 {
+	background: url("../images/bg-hozt.gif") repeat-x scroll 0 18px transparent;
+	color: #F86208;
+	display: block;
+	font-size: 20px;
+	font-weight: normal;
+	height: 24px;
+	line-height: 24px;
+	text-align: left;
+	width: 100%;
+	margin-top: 12px;
+	margin-bottom: 0px;
+}
+
+div.ContactUs .ContactInfo  > h3 > span,
+div.ContactUs .ContactForm  > h3 > span {
+	background-color: #FFFFFF;
+	padding-right: 10px;
+}
+
+div.ContactInfo > p,
+div.ContactUs .ContactForm  > .Descript {
+	color: #545454;
+}
+div.ContactUs .ContactForm  > .Descript {
+	width: 590px;
+}
+
+div.ContactUs .ContactForm  fieldset {
+	/*margin-top: 18px;*/
+	margin-left: 20px;
+}
+
+div.ContactUs .ContactForm  fieldset li {
+	margin-top: 8px;
+}
+
+div.ContactUs .ContactForm  fieldset li input.Verify {
+	width: 152px;
+	clear: none;
+	color: #949494;
+}
+
+div.ContactUs .ContactForm  fieldset li label.Verify {
+	line-height: 30px;
+	height: 30px;
+	float: left;
+	clear: none;
+}
+div.AutionForm form fieldset ul li p iframe{
+	margin-top: 3px;
+}
+form fieldset ul li.error p{
+	color: #F00;
+	font-weight: bold;
+	font-style: italic;
+}
+
+div.ContactUs .ContactForm  fieldset label {
+	width: auto;
+	clear: both;
+	font-weight: bold;
+	color: #545454;
+	height: 22px;
+	line-height: 22px;
+}
+
+div.ContactUs .ContactForm  fieldset input[type="email"],
+div.ContactUs .ContactForm  fieldset input[type="text"] {
+	height: 28px;
+}
+
+div.ContactUs .ContactForm  fieldset input[type="submit"] {
+	background: url("../images/bg-btn-viewmore.png") no-repeat 0 0 transparent;
+	text-align: center;
+	width: 90px;
+	height: 30px;
+	color: #FFF;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+div.ContactUs .ContactForm  fieldset input[type="submit"]:hover {
+	background-position: 0 -30px;
+}
+
+div.ContactUs .ContactForm  fieldset input[type="text"],
+div.ContactUs .ContactForm  fieldset input[type="email"],
+div.ContactUs .ContactForm  fieldset textarea {
+	width: auto;
+	clear: both;
+	float: left;
+	border: 1px solid #545454;
+}
+div.ContactUs .ContactForm  fieldset input[type="text"],
+div.ContactUs .ContactForm  fieldset input[type="email"] {
+	width: 360px;
+}
+div.ContactUs .ContactForm  fieldset textarea {
+	width: 520px;
+}
+
+div.ContactUs .ContactForm  fieldset .SubmitBtns {
+	margin-top: 20px;
+}
+
+div.ContactUs .ContactInfo  {
+	margin-left: 20px;
+	width: 308px;
+	float: left;
+}
+
+div.ContactUs .ContactInfo > ul {
+	list-style: none;
+	float: left;
+	display: block;
+	margin-top: 20px;
+}
+
+div.ContactUs .ContactInfo > ul li {
+	list-style: none;
+	float: left;
+	display: block;
+	padding-left: 25px;
+	background: url(../images/bg-sprite-contact-icon.png) no-repeat 0 5px transparent;
+	line-height: 30px;
+}
+
+div.ContactUs .ContactInfo > ul li.Address {
+	background-position: 0 7px;
+}
+
+div.ContactUs .ContactInfo > ul li.Tel {
+	background-position: 0 -23px;
+}
+
+div.ContactUs .ContactInfo > ul li.Email {
+	background-position: 0 -53px;
+}
+
+
+p.RegDescription {
+	color: #545454;
+}
+
+div.RegForm > div {
+	margin-top: 50px;
+}
+
+div.RegForm label.Reg {
+	font-weight: bold;
+	color: #545454;
+}
+
+div.RegForm input.Birthday {
+	width: 158px!important;
+}
+
+div.StaticInner div.Form .StaticMain {
+  width: 560px;
+}
+
+div.RegForm fieldset input[type="submit"] {
+  background: url("../images/bg-btn-viewmore.png") no-repeat scroll 0 0 transparent;
+  border: medium none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: bold;
+  height: 30px;
+  text-align: center;
+  width: 90px;
+  margin: 0 0 0 180px;
+}
+
+div.RegForm fieldset input[type="submit"]:hover {
+  background-position: 0 -30px;
+}
+
+div.RegForm .SubmitBtns {
+	margin-top: 0;
+}
+
+.PopupLogin form ul li {
+  float: left;
+  line-height: 28px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.PopupLogin form input[type="password"], form input[type="email"], form input[type="text"] {
+  color: #545454;
+  float: left;
+}
+
+.PopupLogin {
+	width: 258px;
+	float: left;
+	position: absolute;
+	display: none;
+	z-index: 500;
+}
+
+.PopupLogin .Top {
+	width: 258px;
+	float: left;
+	background: url("../images/bg-popup-login-top-bottom1.png") no-repeat 0 0 transparent;
+	height: 20px;
+}
+
+.PopupLogin .Bottom {
+	width: 258px;
+	float: left;
+	background: url("../images/bg-popup-login-top-bottom.png") no-repeat 0 100% transparent;
+	height: 20px;
+}
+
+.PopupLogin .Body {
+	width: 210px;
+	float: left;
+	background: url("../images/bg-popup-login-loop.png") repeat-y 0 100% transparent;
+	padding: 0 24px 10px;
+	position: relative;
+}
+
+.PopupLogin label {
+	font-weight: bold;
+	color: #545454;
+}
+
+.PopupLogin ul > li {
+	width: 210px;
+}
+
+.PopupLogin ul > li.LoginBtn{
+	margin-top: 10px;
+}
+
+.PopupLogin ul > li.RememPwd label{
+	padding-left: 5px;
+	font-size: 11px;
+}
+
+.PopupLogin .ForgotPwd {
+	bottom: 10px;
+	display: block;
+	font-size: 11px;
+	position: absolute;
+	right: 24px;
+	color: #f86208;
+	text-decoration: underline;
+}
+
+.PopupLogin .ForgotPwd:hover {
+	color: #0095FF;
+	text-decoration: none;
+}
+
+.PopupLogin ul > li.LoginBtn input[type="submit"] {
+	background: url("../images/bg-btn-login.png") no-repeat 0 0 transparent;
+	border: none;
+	text-align: center;
+	line-height: 30px;
+	width: 210px;
+	height: 30px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+}
+
+.PopupLogin ul > li.LoginBtn input[type="submit"]:hover {
+	background-position: 0 -30px;
+}
+
+.PopupLogin input[type=email],
+.PopupLogin input[type=text] {
+	width: 198px;
+	height: 28px;
+	border: 1px solid #5d5d5d;
+	padding: 0 5px;
+	line-height: 26px;
+}
+
+input::-moz-focus-inner /*Remove button padding in FF*/
+{ 
+    border: 0;
+    padding: 0;
+}
+
+.ContactForm {
+	color: #545454;
+}
+
+.ContactForm .RequireNote {
+	padding-right: 70px;
+}
+
+.ContactForm .RequireNoteTop {
+	padding-right: 70px;
+	font-style: italic;
+	text-align: right;
+}
+
+
+.pageSearch {
+	color: #545454;
+	float: left;
+	margin-bottom: 30px;
+}
+
+.pageSearch > p span {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.pageSearch > p {
+	margin-bottom: 10px;
+}
+
+.pageSearch .screen-reader-text {
+	float: left;
+	line-height: 30px;
+	height: 30px;
+	margin-right: 10px;
+}
+
+.pageSearch input[type="submit"] {
+	background: url("../images/bg-btn-search.png") no-repeat scroll 0 0 transparent;
+	border: medium none;
+	cursor: pointer;
+	height: 30px;
+	overflow: hidden;
+	text-indent: -999em;
+	width: 60px;
+	margin-left: 10px;
+}
+
+.pageSearch input[type="submit"]:hover {
+	background-position: 0 -30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.PagingControl2 a.prev {
+	display: block!important;
+	float: left!important;
+	overflow: hidden!important;
+	position: relative!important;
+	text-indent: -1000em!important;
+	margin: 0 5px 0 0!important;
+	width: 20px!important;
+	padding: 0px!important;
+	background: url("../images/bg-btn-nav.png") no-repeat scroll -25px 0 transparent!important;
+}
+.PagingControl2 a.prev:hover {
+	background-position: -25px -20px!important;
+}
+
+.PagingControl2 a.next {
+	display: block!important;
+	float: left!important;
+	overflow: hidden!important;
+	position: relative!important;
+	text-indent: -1000em!important;
+	margin: 0 5px 0 0!important;
+	width: 20px!important;
+	padding: 0px!important;
+	background: url("../images/bg-btn-nav.png") no-repeat scroll -45px 0 transparent!important;
+}
+.PagingControl2 a.next:hover {
+	background-position: -45px -20px !important;
+}
+
+.PagingControl2 li {
+	background: none!important;
+}
+
+.PagingControl2 li a {
+	
+}
+
+.PagingControl2 li a:hover {
+	
+}
+
+
+
+
+.slideshow_container_slideshow-jquery-image-gallery-custom-styles_1 .slideshow_description {
+	background: none!important;
+}
+
+
+
+.msgLogin{
+	float: left;
+    font-size: 16px;
+    font-weight: bold;
+    left: 17px;
+    position: relative;
+    top: 34px;
+	color: #F00;
+}
+/*LOGINSTYLE*/
+#lwa_wp-submit{
+	background: url("../images/bg-btn-login.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 210px;
+    margin-top: 19px;
+}
+#lwa_wp-submit:hover{
+	background-position: bottom left;
+}
+.lwa-links{
+	margin-top: 10px;
+	position: relative;
+	float: left;
+}
+.lwa-links label{
+	font-size: 11px;
+    padding-left: 1px;
+}
+.lwa-links .lwa-links-remember{
+	position: absolute;
+    right: -111px;
+    top: 1px;
+    color: #F86208;
+    display: block;
+    font-size: 11px;
+    position: absolute;
+    text-decoration: underline;
+}
+.lwa-links .lwa-links-remember:hover {
+    color: #0095FF;
+    text-decoration: none;
+}
+
+form.lwa-remember{
+	margin-top: 10px;
+	border-top: 1px dotted #CCCCCC;
+	padding-top: 4px;
+}
+form.lwa-remember p{
+	margin-bottom: 5px;
+	color: #545454;
+    font-weight: bold;
+}
+form.lwa-remember .lwa-remember-email input{
+	border: 1px solid #545454;
+}
+form.lwa-remember .lwa-submit-button{
+	float: left;
+	margin-top: 10px;
+	position: relative;
+}
+form.lwa-remember .lwa-submit-button input{
+	background: url("../images/bg-btn-login.png") no-repeat scroll top center transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 129px;	
+	border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;-o-border-radius: 3px;-ms-border-radius: 3px;
+}
+form.lwa-remember .lwa-submit-button input:hover{
+	background-position: bottom left;
+}
+
+form.lwa-remember .lwa-submit-button .lwa-links-remember-cancel{
+	color: #000000;
+    font-size: 14px;
+    left: 142px;
+    position: absolute;
+    top: 4px;
+}
+.lwa-password{
+	float: left;
+	margin-top: 3px;
+}
+.lwa-username label,.lwa-password label{
+	margin-bottom: 2px;
+	float: left;
+}
+
+.InfoAuction{
+	font-size: 16px;
+	color: #F00;
+	font-weight: bold;
+	float: left;
+}
+
+.UsernameWin{
+	color: #F86208;
+}
+
+
+
+@-moz-document url-prefix() {
+    #errorMsgBox {
+        top: 146 !important;
+    }
+}
+
+#errorMsgBox{
+	position: absolute;
+	top: 146px;
+	left: 630px;
+	width: 370px;
+}
+#errorMsgBox .msgLine{
+	margin: 23px;
+	color: #F00;
+	font-style: italic;
+	position: absolute;
+	padding-right: 10px;
+}
+.ResetPass{
+	top: 106px !important;
+}
+#msg_fullname{
+    top: 40px;
+}
+#msg_birthday{
+    top: 82px;
+}
+#msg_cmnd{
+    top: 126px;
+}
+#msg_thuongtru{
+    top: 168px;
+}
+#msg_phone{
+    top: 210px;
+}
+#msg_email{
+    top: 255px;
+}
+#msg_fullname2{
+	top: 386px;
+}
+#msg_tuoi2{
+	top: 429px;
+}
+#msg_fullname3{
+	top: 471px;
+}
+#msg_tuoi3{
+	top: 515px;
+}
+#msg_newpass{
+	top: 41px;
+}
+#msg_newpassconfig{
+	top: 84px;
+}
+#msg_captcha{
+	position: absolute;
+	left: 417px;
+	font-style:italic;
+	color: #F00;
+}
+.msgTimeStart{
+	float: left;
+	font-weight: bold;
+	margin-top: 30px;
+	padding-top: 6px;
+}
+
+#defaultCountdown {
+	float: left;
+	height: 45px;
+	margin-left: 10px;
+	margin-top: 30px;
+	width: 240px;
+}
+
+#lwa-info > a{
+	border-bottom: 1px dotted #999999;
+    color: #545454 !important;
+    display: block;
+    font-weight: bold;
+    padding: 5px 0 3px 23px;
+}
+
+.EditAccount{
+	background: url("../images/acc_icnsprt-1.00.gif") no-repeat scroll 0 -20px transparent;
+}
+.ChangPass{
+	background: url("../images/acc_icnsprt-1.00.gif") no-repeat scroll 0 7px transparent;
+}
+.logout{
+	background: url("../images/acc_icnsprt-1.00.gif") no-repeat scroll 0 -43px transparent;
+}
+
+
+.NhaTaiTro{
+	width: 49%;
+	float: left;
+}
+.DonViToChuc{
+	width: 49%;
+	float: left;
+	margin-right: 9px;
+}
+
+.NhaTaiTro .slideshow_container .slideshow_content{
+	border-left: 1px solid #ccc !important;
+}
+
+.SecMenu ul li #loginLnk{
+	float: left !important;
+}
+
+.SecMenu ul li span{
+	float: left;
+	/*margin-left: 32px;*/
+}
+#loading{
+	left: 284px;
+    position: absolute;
+    top: 11px;
+}
+
+.SubmitBtns{
+	position: relative;
+}
+
+.UtilityUser{
+	background: url(../images/zinguser_icnsprt-1.png) no-repeat 66px 9px;
+	padding-right: 17px;
+}
+
+span.RequestInfo{
+	float: left;
+	margin-right: 4px;
+}
+span.TextOr{
+	margin-left: 4px;
+}
+
+#lwa_user_login{
+	margin: 0px !important;
+}
+
+.wpcf7-form span.wpcf7-not-valid-tip{
+	background: none !important;
+	border: none !important;
+	top: -3px !important;
+	color: #ff0000;
+}
+
+
+.RegDescription{
+	text-align: center;
+	font-size: 15px;
+	margin-top: 30px;
+}
+
+.msgLogin #loginLnk {
+	float: none!important;
+	font-weight: bold;
+}
+
+.textDone{
+	color: #0080ff !important;
+}
+
+.RegForm form input.Verify{
+	width: 59px;
+}
+.EventContent .hasCountdown{
+	float: left;
+    font-size: 13px;
+    margin: 0 0 0 0px;
+    width: 215px;
+}
+
+.Block {
+    display: inline-table;
+    height: 100%;
+    margin-left: 2%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width:31.3333%;
+}
+.Block:first-child {
+    margin-left: 0;
+}
+#msg_policy {    
+    top: 430px;
+}
+.social_connect_ui {
+    clear: both;
+    padding-top: 16px;
+}
+
+
+

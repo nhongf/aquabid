@@ -1,0 +1,283 @@
+.StaticTopPanel {
+	margin-bottom: 25px;
+}
+
+ul.ListGuests {
+	display: block;
+	float: left;
+	list-style: none outside none;
+	margin-left: 10px;
+}
+
+ul.ListGuests li {
+	display: block;
+	float: left;
+	list-style: none;
+	width: 300px;
+	height: 220px;
+	overflow: hidden;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+ul.ListGuests li.LastCol {
+	margin-right: 0px;
+}
+
+ul.ListGuests li > a {
+	display: block;
+	float: left;
+	width: 300px;
+	height: 180px;
+	overflow: hidden;
+	position: relative;
+}
+
+ul.ListGuests li > a img.Image {
+	display: block;
+	float: left;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+ul.ListGuests li > a span.Mask {
+	background: url("../images/bg-guest-mask.png") no-repeat scroll 0 0 transparent;
+	color: #FFFFFF;
+	display: block;
+	float: left;
+	height: 80px;
+	left: 0;
+	overflow: hidden;
+	padding-top: 100px;
+	position: absolute;
+	text-align: center;
+	text-decoration: underline;
+	text-indent: -9999em;
+	top: 0;
+	width: 300px;
+}
+
+ul.ListGuests li > a:hover span.Mask {
+	background-position: 0 -180px;
+	text-indent: 0;
+}
+
+ul.ListGuests li > p.Descript {
+	background: url("../images/bg-guest-mask.png") no-repeat scroll 0 -360px transparent;
+	display: block;
+	float: left;
+	height: 40px;
+	text-align: center;
+	width: 300px;
+}
+
+ul.ListGuests li > p.Descript > a:visited,
+ul.ListGuests li > p.Descript > a:link {
+	color: #545454;
+	font-weight: bold;
+	text-decoration: none;
+}
+ul.ListGuests li > p.Descript > a:hover {
+	color: #0095FF;
+	text-decoration: underline;
+}
+
+ul.ListGuests li > p.Descript > span {
+	color: #888888;
+	font-size: 12px;
+	font-style: italic;
+}
+
+
+.GuestDetail {
+	float: left;
+}
+
+.GuestDetail div.Image {
+	float: left;
+	margin-right: 20px;
+}
+
+.GuestDetail div.Image img {
+
+}
+.detailGuest{
+    float: left;
+    width: 960px;
+    margin-top: 10px;    
+}
+.detailGuest .title{font-weight: bold;}
+
+.GuestDetail div.Detail.HasImage {
+	float: left;
+	width: 368px;
+}
+
+.GuestDetail div.Detail {
+	float: left;
+	color: #545454;
+}
+
+.GuestDetail div.Detail h3 {
+	text-align: left;
+	color: #000;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+	padding: 0;
+	margin-bottom: 12px;
+}
+
+.GuestDetail div.Detail > ul.ListDetail {
+}
+
+.GuestDetail div.Detail > ul.ListDetail li {
+	background: url("../images/content/icon.gif") no-repeat 0 10px transparent;
+	padding-left: 15px;
+}
+
+.GuestDetail div.Detail > ul.ListDetail li p {
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+.MoreGuests {
+	float: left;
+	width: 960px;
+	margin-top: 20px;
+}
+
+.MoreGuests > h3 {
+	background: url("../images/bg-hozt.gif") repeat-x scroll 0 18px transparent;
+	display: block;
+	height: 24px;
+	line-height: 24px;
+	width: 100%;
+	color: #f86208;
+	font-size: 20px;
+	font-weight: normal;
+	text-align: left;
+}
+
+.MoreGuests > h3 > span {
+	background-color: #FFF;
+	padding-right: 10px;
+}
+
+.MoreGuests > ul {
+	width: 960px;
+	float: left;
+	display: block;
+	list-style: none;
+}
+
+.MoreGuests > ul > li {
+	display: block;
+	float: left;
+	height: 164px;
+	width: 220px;
+	list-style: none outside none;
+	overflow: hidden;
+	margin-left: 24px;
+}
+
+.MoreGuests > ul > li:first-child {
+	margin-left: 0px;
+}
+
+.MoreGuests > ul > li > a {
+	display: block;
+	float: left;
+	height: 132px;
+	width: 220px;
+	overflow: hidden;
+	position: relative;
+}
+
+.MoreGuests > ul > li > a > img {
+	height: 132px;
+	width: 220px;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.MoreGuests > ul > li > a > span.Mask {
+	background: url("../images/bg-guest-mini-mask.png") no-repeat scroll 0 0 transparent;
+	color: #FFFFFF;
+	display: block;
+	float: left;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	text-align: center;
+	text-decoration: underline;
+	text-indent: -9999em;
+	top: 0;
+	height: 132px;
+	width: 220px;
+}
+
+.MoreGuests > ul > li > a:hover > span.Mask {
+	background-position: 0 -132px;
+}
+
+.MoreGuests > ul > li > p.Descript {
+	background: url("../images/bg-guest-mini-mask.png") no-repeat scroll 0 -264px transparent;
+	color: #545454;
+	display: block;
+	float: left;
+	font-weight: bold;
+	height: 25px;
+	padding-top: 7px;
+	text-align: center;
+	width: 220px;
+}
+.MoreGuests > ul > li > p.Descript > a {
+	text-align: center;
+	color: #545454;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.MoreGuests > ul > li > p.Descript > a:hover {
+	color: #0095FF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

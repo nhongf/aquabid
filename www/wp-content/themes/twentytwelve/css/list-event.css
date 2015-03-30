@@ -1,0 +1,143 @@
+/* Events List */
+ul.ListEvent {
+	margin: 0;
+	overflow: hidden
+}
+	ul.ListEvent li {
+		width: 100%;
+		float: left;
+		padding: 19px 0;
+		overflow: hidden;
+		border-bottom: 1px solid #a8a8a8;
+	}
+	ul.ListEvent li.Last {
+		background: none;
+		border-bottom: none;
+	}
+		ul.ListEvent li a {
+			float: left;
+			position: relative;
+			cursor: pointer;
+		}
+		ul.ListEvent li a img {
+			display: block;
+			border: 1px solid #a8a8a8;
+		}
+		ul.ListEvent li a:hover img {
+			border: 1px solid #0095ff;
+		}
+			ul.ListEvent li a span.BorderSuKien {
+				background: url(../images/bor-sukien.png) 0 0 no-repeat;
+				height: 80px;
+				left: 0;
+				position: absolute;
+				text-indent: -9999px;
+				top: 0;
+				width: 140px;
+			}
+		ul.ListEvent li .EventContent {
+			width: 612px;
+			padding: 0;
+			float: right;
+			overflow: hidden
+		}
+			ul.ListEvent li .EventContent h3 {
+				font-size: 16px;
+				color: #241a12;
+				text-align: left;
+				font-weight: bold;
+				margin: 0 0 5px;
+				padding: 0;
+				float: left;
+			}
+				ul.ListEvent li .EventContent h3 a:link,
+				ul.ListEvent li .EventContent h3 a:visited {
+					color: #241a12;
+					text-decoration: none;
+				}
+				ul.ListEvent li .EventContent h3 a:hover {
+					color: #0095ff;
+					text-decoration: underline;
+				}
+			ul.ListEvent li .EventContent .Date {
+				clear: both;
+				color: #545454;
+				display: block;
+				float: left;
+				font-style: italic;
+				padding-bottom: 3px;
+				/* font-weight: bold; */
+			}
+			ul.ListEvent li .EventContent .ViewMore {
+				width: 100%;
+				margin-top: 17px;
+			}
+			ul.ListEvent li .EventContent .ViewMore a:link,
+			ul.ListEvent li .EventContent .ViewMore a:visited {
+				background: url(../images/bg-btn-viewmore.png) no-repeat 0 0 transparent;
+				width: 90px;
+				height: 30px;
+				text-align: center;
+				font-weight: bold;
+				color: #FFF;
+				text-decoration: none;
+				line-height: 28px;
+			}
+			ul.ListEvent li .EventContent .ViewMore a:hover {
+				background-position: 0 -30px;
+			}
+.TitleEventNews {
+	padding: 4px 0 10px 0px;
+	line-height: 26px;
+	font-size: 20px;
+	font-family: Arial;
+	margin: 0 0 0px;
+	color: #000;
+	float: left;
+}
+.DateDetailsEvent {
+	float: right;
+	font-size: 12px;
+	color: #666;
+	text-align: right;
+	width: 180px;
+	padding-top: 5px;
+}
+.Wrapper .DateDetails {
+	padding-top: 9px;
+}
+			/* Related events list */
+			ul.ListEvent li .EventContent ul.ListEContent {
+				clear: both;
+				width: 100%;
+				margin: 0 0 0 0px;
+				overflow: hidden;
+			}
+				ul.ListEvent li .EventContent ul.ListEContent li {
+					width: 100%;
+					height: auto;
+					float: left;
+					margin: 0;
+					padding: 0;
+					overflow: hidden;
+					font-size: 12px;
+					background: url(../images/icon-news.gif) no-repeat left 7px;
+					border-bottom: none;
+				}
+					ul.ListEvent li .EventContent ul.ListEContent li a:link,
+					ul.ListEvent li .EventContent ul.ListEContent li a:visited {
+						color: #333;
+						padding: 0 0 0 10px;
+						text-decoration: none;
+					}
+					ul.ListEvent li .EventContent ul.ListEContent li a:hover {
+						color: #0092d1;
+						text-decoration: underline;
+					}
+.EShortContent {
+	clear: both;
+	width: 100%;
+	color: #676767;
+}
+                /* END. Related events list */
+/* END. Events List */

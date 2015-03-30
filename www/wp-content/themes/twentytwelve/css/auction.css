@@ -1,0 +1,169 @@
+.StaticTopPanel {
+	margin-bottom: 8px;
+}
+
+ul.ListEvent li .EventContent .Date {
+	font-weight: bold;
+}
+
+.AutionDetail {
+	float: left;
+	margin-bottom: 15px;
+}
+
+.AutionDetail div.Image {
+	float: left;
+	margin-right: 20px;
+}
+
+.AutionDetail div.Image img {
+	
+}
+
+.AutionDetail div.Detail.HasImage {
+	float: left;
+	width: 368px;
+}
+
+.AutionDetail div.Detail {
+	float: left;
+}
+
+.AutionDetail div.Detail h3 {
+	text-align: left;
+	color: #545454;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+	padding: 0;
+	margin-bottom: 12px;
+}
+
+.AutionDetail div.Detail > ul.ListDetail {
+}
+
+.AutionDetail div.Detail > ul.ListDetail li {
+	background: url("../images/content/icon.gif") no-repeat 0 10px transparent;
+	padding-left: 15px;
+	text-align: justify;
+	margin-bottom: 5px;
+}
+
+.AutionDetail div.Detail > ul.ListDetail li p {
+	margin-top: 20px;
+	text-align: justify;
+}
+.AutionForm {
+	float: left;
+	width: 515px;
+	margin-top: 30px;
+}
+.AutionList {
+	float: left;
+	width: 419px;
+	margin-left: 20px;
+	margin-top: 30px;
+}
+.AutionList > div {
+	float: left;
+	width: 419px;
+	overflow-y: auto;
+	height: 340px;
+}
+.AutionList > div ul {
+    float: right;
+    width: 286px;
+}
+.AutionList > div > iframe{
+	height: 340px;
+	width: 100%;
+}
+
+.AutionList > div ul li {
+    color: #545454;
+    list-style-position: outside;
+    list-style-type: decimal;
+    margin-bottom: 10px;
+}
+
+.AutionList h3{
+	margin-bottom: 0px;
+}
+
+.AutionList h3,
+.AutionForm h3 {
+  background: url("../images/bg-hozt.gif") repeat-x scroll 0 18px transparent;
+	display: block;
+	height: 24px;
+	line-height: 24px;
+	width: 100%;
+}
+
+.AutionList h3 span,
+.AutionForm h3 span {
+	color: #F86208;
+	float: left;
+	background-color: #FFF;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	padding-right: 10px;
+}
+
+.AutionForm label {
+	color: #545454;
+	font-weight: bold;
+}
+
+.AutionForm select {
+	width: 230px;
+	border: 1px solid #5D5D5D;
+	padding-bottom: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+	width: 230px;
+}
+
+.AutionForm input.SoTien {
+	width: 210px;
+	color: #f86208;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.AutionForm .Currency {
+	padding-left: 8px;
+}
+
+.AutionForm input.Verify {
+	width: 80px;
+	color: #545454;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.AutionForm .SubmitBtns {
+	margin-top: 30px;
+}
+
+.AutionForm .SubmitBtns input {
+	background: url("../images/bg-btn-aution.png") no-repeat 0 0 transparent;
+	width: 230px;
+	height: 40px;
+	color: #FFF;
+	font-weight: bold;
+	line-height: 40px;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+	margin-left: 180px;
+}
+
+.AutionForm .SubmitBtns input:hover {
+	background-position: 0 -40px;
+}
+
+ul.ListEvent li .EventContent .Date {
+	color: #F86208!important;
+	font-weight: bold;
+}
